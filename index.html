@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking Slot Allocation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🚗 SmartPark</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#parking">Parking</a>
+            <a href="#allocation">Allocation</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Smart Parking Slot Allocation</h1>
+
+            <p>
+                Find, allocate and manage parking slots easily
+                using our smart parking management system.
+            </p>
+
+            <button onclick="scrollToParking()">
+                Find Parking Slot
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+
+        <div class="stat-card">
+            <div class="icon">🅿️</div>
+            <h3>Total Slots</h3>
+            <p id="totalSlots">20</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon">🟢</div>
+            <h3>Available</h3>
+            <p id="availableSlots">20</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon">🔴</div>
+            <h3>Occupied</h3>
+            <p id="occupiedSlots">0</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon">💰</div>
+            <h3>Parking Rate</h3>
+            <p>₹30/hr</p>
+        </div>
+
+    </section>
+
+
+    <!-- Parking Section -->
+    <section class="parking-section" id="parking">
+
+        <h2>Parking Slot Status</h2>
+
+        <p class="section-description">
+            Green slots are available and red slots are occupied.
+        </p>
+
+        <!-- Legend -->
+
+        <div class="legend">
+
+            <div>
+                <span class="legend-box available"></span>
+                Available
+            </div>
+
+            <div>
+                <span class="legend-box occupied"></span>
+                Occupied
+            </div>
+
+        </div>
+
+
+        <!-- Parking Grid -->
+
+        <div class="parking-grid" id="parkingGrid">
+
+        </div>
+
+    </section>
+
+
+    <!-- Allocation Section -->
+
+    <section class="allocation-section" id="allocation">
+
+        <div class="allocation-card">
+
+            <h2>🚘 Allocate Parking Slot</h2>
+
+            <p>
+                Enter your vehicle details to automatically
+                allocate the nearest available slot.
+            </p>
+
+            <form id="parkingForm">
+
+                <label for="vehicleNumber">
+                    Vehicle Number
+                </label>
+
+                <input
+                    type="text"
+                    id="vehicleNumber"
+                    placeholder="Example: TS09AB1234"
+                    required
+                >
+
+
+                <label for="vehicleType">
+                    Vehicle Type
+                </label>
+
+                <select id="vehicleType">
+
+                    <option value="Car">
+                        🚗 Car
+                    </option>
+
+                    <option value="Bike">
+                        🏍️ Bike
+                    </option>
+
+                    <option value="SUV">
+                        🚙 SUV
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Allocate Slot
+                </button>
+
+            </form>
+
+
+            <!-- Allocation Result -->
+
+            <div id="result" class="result">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Current Vehicles -->
+
+    <section class="vehicles-section">
+
+        <h2>Currently Parked Vehicles</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Slot</th>
+                        <th>Vehicle Number</th>
+                        <th>Vehicle Type</th>
+                        <th>Entry Time</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="vehicleTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section class="about" id="about">
+
+        <h2>About SmartPark</h2>
+
+        <p>
+            Smart Parking Slot Allocation is a web-based parking
+            management system designed to help drivers find and
+            allocate parking spaces efficiently.
+        </p>
+
+        <div class="features">
+
+            <div>
+                <h3>🤖 Smart Allocation</h3>
+                <p>
+                    Automatically finds the first available parking slot.
+                </p>
+            </div>
+
+            <div>
+                <h3>📊 Live Status</h3>
+                <p>
+                    View available and occupied parking slots instantly.
+                </p>
+            </div>
+
+            <div>
+                <h3>💰 Easy Payment</h3>
+                <p>
+                    Parking charges can be calculated based on parking time.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 SmartPark | Smart Parking Slot Allocation System
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
